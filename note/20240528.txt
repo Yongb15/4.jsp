@@ -1,0 +1,16 @@
+test_pm/1111
+
+JDBC(Java DataBase Connectivity)
+- Java 기반 애플리케이션의 데이터를 데이터베이스에 저장 및 업데이트하거나 데이터베이스에 저장된 데이터를 Java에서 사용할 수 있도록하는 Java API이다.
+
+Java 애플리케이션에서 데이터베이스에 접근하기 위해 JDBC API를 사용하여 데이터베이스에 연동할 수 있으며 데이터	베이스에서 자료를 업데이트 하는 방법을 제공
+JDBC API -> java.sql.*
+
+JDBC API 사용의 흐름
+1. JDBC 드라이버 로딩 : 사용하고자 하는 JDBC 드라이버를 로딩한다.
+2. Connection 객체 생성 : JDBC 드라이버가 정상적으로 로딩되면 DriverManager를 통해 데이터베이스와 연결되는 세션(Session)인 Connection 객체를 생성한다.
+3. Statement 객체 생성 : 작성된 SQL 쿼리문을 실행하기 위한 객체
+		ㄴ 하나의 행이 하나의 부서에 대한 정보
+4. Query 실행 : 생성된 Statement 객체를 이용하여 입력된 SQL 쿼리를 실행한다.
+5. ResultSet 객체로부터 데이터 조회 : 실행된 SQL 쿼리문에 대한 결과는 ResultSet 객체에 저장된다.
+6. ResultSet -> Statement -> Connection 이 순서대로 객체를 닫는다.
