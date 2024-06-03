@@ -1,0 +1,8 @@
+package vo;
+
+public class PersonVo {
+	//VO클래스에서 만드는 변수명은 실제 DB의 컬럼명과 똑같은 이름으로 만들어주는 것이 좋다
+	String name;
+	int age;
+	String tel;
+}

@@ -1,0 +1,22 @@
+<%@page import="mevo.MeVO"%>
+<%@page import="medao.MeDAO"%>
+<%@page import="java.lang.reflect.Member"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%
+    List<MeVO> member_list = MeDAO.getInstance().selectList();
+    %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+
+
+</table>
+</body>
+</html>

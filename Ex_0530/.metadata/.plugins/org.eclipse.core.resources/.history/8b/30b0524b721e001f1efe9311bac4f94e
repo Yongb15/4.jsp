@@ -1,0 +1,55 @@
+<%@page import="dao.SjDAO"%>
+<%@page import="vo.SjVO"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+   <%
+   List<SjVO> list = SjDAO.getInstance().selectList();
+   %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function del(no){
+	if(confirm("정말 삭제하시겠습니까?") == false){
+		return;
+	}
+	loction.href='sung_del.jsp?no='+no;
+}
+</script>
+</head>
+<body>
+<table border="1">
+<tr>
+<th>이름</th>
+<th>국어</th>
+<th>영어</th>
+<th>수학</th>
+<th>총점</th>
+<th>평균</th>
+<th>등수</th>
+</tr>
+<%
+for(int i = 0; i<list.size(); i++){
+	SjVO dv = list.get(i);
+%>
+	<tr>
+	<td><%=dv.getName() %></td>
+	<td><%=dv.getKor() %></td>
+	<td><%=dv.getEng() %></td>
+	<td><%=dv.getMat() %></td>
+	<td><%=dv.getTot() %></td>
+	<td><%=dv.getAvg() %></td>
+	<td><%=dv.getRank() %></td>
+	<td><input type="button" value="삭제" onclick="del(<%=dv.getNo %>)"></td>
+	</tr>
+<%} %>
+<tr>
+<td colspan="9" align="center">
+<input type="button" value="학생정보 추가하기"onclick="location.href='sung_register.jsp">
+</td>
+</table>
+</body>
+</html>

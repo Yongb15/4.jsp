@@ -1,0 +1,11 @@
+1716981784327	Move 'context.xml' to 'META-INF'
+1716984262624	Rename resource 'sungtb.jsp'
+1716984350532	Delete element
+1716985118977	Rename type 'DeptDAO'
+1716985133411	Rename type 'DeptVO'
+1716986774273	Move 'lib' to 'lib'
+1716986781247	Delete element
+1716986805239	Delete elements
+1717066114021	Delete element
+1717066123756	Rename resource 'sungjuk.jsp'
+1717071061218	Copy package

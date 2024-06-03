@@ -1,0 +1,6 @@
+package mevo;
+
+public class MeVO {
+	private int idx;
+	private String name,id,pwd,email;
+}

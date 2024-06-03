@@ -1,0 +1,31 @@
+<%@page import="java.sql.Connection"%>
+<%@page import="javax.sql.DataSource"%>
+<%@page import="javax.naming.Context"%>
+<%@page import="javax.naming.InitialContext"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%
+    //톰캣이 JNDI를 검색하기 위해 필요한 클래스
+    InitialContext ic = new InitialContext();
+    Context ctx = (Context)ic.lookup("java:comp/env");
+    //lookup() : jsp에서 db에 대한 정보가 저장되어 있는 위치를 조회
+    
+    DataSource ds = (DataSource)ctx.lookup("jdbc/oracle_text");
+    //검색된 리소스를 통해 필요한 자원을 검색
+    //context.xml의 name 속성값
+    
+   Connection conn = ds.getConnection();
+    // 위에서 준비해둔 경로로 로그인 접속을 시도
+    
+    System.out.println("---get Connection---");
+    %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

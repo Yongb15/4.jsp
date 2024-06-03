@@ -1,0 +1,35 @@
+<%@page import="dao.SjDAO"%>
+<%@page import="vo.DeptVO"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+   <%
+   List<DeptVO> list = SjDAO.getInstance().selectList();
+   %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+<tr>
+<th>이름</th>
+<th>국어</th>
+<th>영어</th>
+<th>수학</th>
+</tr>
+<%for(int i = 0; i<list.size(); i++){
+	DeptVO dv = list.get(i);
+	%>
+	<tr>
+	<td><%=dv.getName() %></td>
+	<td><%=dv.getKor() %></td>
+	<td><%=dv.getEng() %></td>
+	<td><%=dv.getMat() %></td>
+	</tr>
+<%} %>
+</table>
+</body>
+</html>

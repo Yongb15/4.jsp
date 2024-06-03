@@ -1,0 +1,9 @@
+package VO;
+
+public class SawonVO {
+	private int deptno;
+	private int sabun;
+	private String saname;
+	private int sajob;
+		
+}
