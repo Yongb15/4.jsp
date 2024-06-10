@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dept">
+<!-- DB에 쿼리문을 요청하고 결과를 돌려받는 속성파일 -->
+<!-- sqlMapConfig.xml이 읽음 -->
+<select id="dept_list" resultType="vo.DeptVO">	<!-- 패키지명과 클래스명 확실히 작성! 대소문자 구분함! -->
+	select * from dept		<!-- ; 생략 -->
+</select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sawon">
+<!-- DB에 쿼리문을 요청하고 결과를 돌려받는 속성파일 -->
+<!-- sqlMapConfig.xml이 읽음 -->
+<select id="sawon_list" resultType="vo.SawonVO">	<!-- 패키지명과 클래스명 확실히 작성! 대소문자 구분함! -->
+	select * from sawon		<!-- ; 생략 -->
+</select>
+<select id="sawon_list_deptno" resultType="vo.SawonVO" parameterType="int">	<!-- 패키지명과 클래스명 확실히 작성! 대소문자 구분함! -->
+	select * from sawon where deptno = #{deptno} 		<!-- ; 생략, 파라미터 넣을때는 #{}를 사용 -->
+</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
