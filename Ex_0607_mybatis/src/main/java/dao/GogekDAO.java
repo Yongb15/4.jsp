@@ -36,4 +36,13 @@ public class GogekDAO {
 		sqlSession.close();
 		return list;
 	}
+	
+	public List<GogekVO> selectList(String search) {
+		SqlSession sqlSession = factory.openSession();
+		
+		List<GogekVO> list = sqlSession.selectList("gogek.gogek_list_select", search);
+		
+		sqlSession.close();
+		return list;
+	}
 }
